@@ -1,5 +1,3 @@
-import { API_BASE } from "../signup/page";
-
 "use client";
 
 import { useState } from "react";
@@ -28,6 +26,7 @@ export default function Home() {
     formData.append('file', file);
 
     try {
+      // ** Using the deployed backend URL **
       const response = await fetch('https://nutrilens-backend-40fc.onrender.com/analyze-label/', {
         method: 'POST',
         headers: {
@@ -72,7 +71,7 @@ export default function Home() {
             </h1>
             {user ? (
               <p className="mt-4 max-w-xl mx-auto text-lg text-gray-600">
-                Welcome back! Upload a food label to get your instant, personalized analysis.
+                Welcome back! Upload a food label below to get your instant, personalized analysis.
               </p>
             ) : (
               <p className="mt-4 max-w-xl mx-auto text-lg text-gray-600">

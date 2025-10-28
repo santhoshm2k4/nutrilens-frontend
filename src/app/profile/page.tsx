@@ -52,7 +52,7 @@ export default function ProfilePage() {
         const fetchProfile = async () => {
             setIsPageLoading(true);
             try {
-                const response = await fetch('${API_BASE}/profile/', {
+                const response = await fetch(`${API_BASE}/profile/`, {
                     headers: { 'Authorization': `Bearer ${token}` },
                 });
 
@@ -108,7 +108,7 @@ export default function ProfilePage() {
         };
 
         try {
-            const response = await fetch('${API_BASE}/profile/', {
+            const response = await fetch(`${API_BASE}/profile/`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
