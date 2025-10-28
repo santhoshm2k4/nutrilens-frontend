@@ -1,4 +1,6 @@
 // In: src/app/signup/page.tsx
+export const API_BASE = "https://nutrilens-backend-40fc.onrender.com";
+
 "use client";
 
 import { useState } from 'react';
@@ -20,7 +22,7 @@ export default function SignupPage() {
         setIsSuccess(false);
 
         try {
-            const response = await fetch('http://localhost:8000/users/', {
+            const response = await fetch(`${API_BASE}/users/`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password }),

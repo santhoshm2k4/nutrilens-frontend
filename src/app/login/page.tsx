@@ -1,4 +1,6 @@
 // In: src/app/login/page.tsx
+const API_BASE = "https://nutrilens-backend-40fc.onrender.com";
+
 "use client";
 
 import { useState } from 'react';
@@ -21,7 +23,7 @@ export default function LoginPage() {
         setMessage('');
 
         try {
-            const response = await fetch('http://localhost:8000/token', {
+            const response = await fetch(`${API_BASE}/token`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams({ username: email, password }),

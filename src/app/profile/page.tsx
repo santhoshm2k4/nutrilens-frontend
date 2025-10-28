@@ -1,4 +1,7 @@
+const API_BASE = "https://nutrilens-backend-40fc.onrender.com";
+
 "use client";
+
 
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
@@ -49,7 +52,7 @@ export default function ProfilePage() {
         const fetchProfile = async () => {
             setIsPageLoading(true);
             try {
-                const response = await fetch('http://localhost:8000/profile/', {
+                const response = await fetch('${API_BASE}/profile/', {
                     headers: { 'Authorization': `Bearer ${token}` },
                 });
 
@@ -105,7 +108,7 @@ export default function ProfilePage() {
         };
 
         try {
-            const response = await fetch('http://localhost:8000/profile/', {
+            const response = await fetch('${API_BASE}/profile/', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

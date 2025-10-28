@@ -1,3 +1,5 @@
+import { API_BASE } from "../signup/page";
+
 "use client";
 
 import { useState } from "react";
@@ -26,7 +28,7 @@ export default function Home() {
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://localhost:8000/analyze-label/', {
+      const response = await fetch('https://nutrilens-backend-40fc.onrender.com/analyze-label/', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
