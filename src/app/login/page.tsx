@@ -1,7 +1,7 @@
 // In: src/app/login/page.tsx
-const API_BASE = "https://nutrilens-backend-40fc.onrender.com";
-
 "use client";
+
+const API_BASE = "https://nutrilens-backend-40fc.onrender.com";
 
 import { useState } from 'react';
 import Link from 'next/link';

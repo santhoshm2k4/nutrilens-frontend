@@ -1,6 +1,6 @@
-const API_BASE = "https://nutrilens-backend-40fc.onrender.com";
-
 "use client";
+
+const API_BASE = "https://nutrilens-backend-40fc.onrender.com";
 
 
 import { useState, useEffect } from 'react';
